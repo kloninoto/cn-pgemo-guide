@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pg模拟器 · 产品说明与场景指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #fafafa;
+            color: #1e1e1e;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 680px;
+            width: 100%;
+        }
+        /* hero */
+        .hero {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 2.2rem;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #121212;
+            margin-bottom: 0.6rem;
+        }
+        .hero .sub {
+            color: #555;
+            font-size: 1rem;
+            border-left: 3px solid #b0b0b0;
+            padding-left: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        /* 章节 */
+        section {
+            margin-bottom: 2.8rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 550;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.35rem;
+            margin-bottom: 1.2rem;
+            color: #232323;
+            letter-spacing: -0.01em;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+        .highlight-badge {
+            background: #f0f0f0;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #3a3a3a;
+            letter-spacing: 0.02em;
+            margin-bottom: 1.2rem;
+        }
+        ul {
+            list-style: none;
+            margin: 1rem 0 1.5rem 0;
+        }
+        ul li {
+            padding: 0.6rem 0 0.6rem 1.6rem;
+            position: relative;
+            border-bottom: 1px dashed #eee;
+        }
+        ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #8a8a8a;
+        }
+
+        .note-card {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 1.8rem 1.5rem;
+            margin: 1.8rem 0;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .note-card p:last-child {
+            margin-bottom: 0;
+        }
+        .small-meta {
+            font-size: 0.85rem;
+            color: #6f6f6f;
+            border-top: 1px solid #ddd;
+            padding-top: 1rem;
+            margin-top: 1.5rem;
+        }
+        a {
+            color: #1e1e1e;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b0b0b0;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+        a:hover {
+            color: #000;
+            text-decoration-color: #000;
+        }
+
+        .faq-item {
+            margin-top: 1.2rem;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        .faq-item p {
+            margin-bottom: 0.6rem;
+            color: #3b3b3b;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e6e6e6;
+            margin: 2rem 0 1.5rem;
+        }
+        .footer-note {
+            color: #7a7a7a;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 1px solid #e8e8e8;
+            padding-top: 1.8rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            body { padding: 1.5rem 1rem; }
+            .hero h1 { font-size: 1.7rem; }
+            .note-card { padding: 1.4rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <h1>pg模拟器 · 检索与对照手册</h1>
+        <div class="sub">基于日常查询、比对与延伸阅读视角的产品说明</div>
+    </div>
+
+    <!-- 摘要 -->
+    <section>
+        <p>在日常技术调研或文档翻阅中，我们常需要一种轻量、边界清晰的对照环境。<a href="https://cn-pgemo.com">pg模拟器</a> 正是为此类需求设计的工具型页面。它并非一个完整的数据库系统，而是一组经过整理的参考与模拟交互界面，适合在查阅文档、验证理解或进行快速概念比照时使用。</p>
+        <p>从使用经验看，大多数场景集中在“想快速确认某个函数签名”“对比不同版本的行为差异”或“在无网络环境下浏览本地化描述”。正因如此，pg模拟器 一直保持克制的功能边界，不试图取代官方文档或真实数据库实例，而是作为辅助性参考页面存在。</p>
+    </section>
+
+    <!-- 亮点 / 特点 -->
+    <section>
+        <h2>功能特点</h2>
+        <ul>
+            <li><strong>面向检索的布局</strong> —— 信息密度适中，标题与代码块层次分明，减少视觉干扰，便于快速定位。</li>
+            <li><strong>贴近中文场景</strong> —— 核心词汇与注释采用中文表述，降低入门门槛，适合母语阅读习惯。</li>
+            <li><strong>离线可用的静态页面</strong> —— 无需后端服务，页面内容完全基于前端组织，部署至 GitHub Pages 或其他静态托管即可独立访问。</li>
+            <li><strong>版本与行为注释</strong> —— 在常见函数或参数旁附带简短说明，帮助新用户理解使用背景。</li>
+        </ul>
+    </section>
+
+    <!-- 使用建议 + 场景 -->
+    <section>
+        <h2>适用场景与建议</h2>
+        <p>以下是从实际使用中归纳的几种典型情形，供参考：</p>
+        <div class="note-card">
+            <p><strong>对照查询</strong> —— 当你在学习资料中遇到一个不熟悉的操作符或数据类型，可借助 pg模拟器 的整理页快速查看其定义与示例。其描述往往比原始官方文档更精炼，且省去多次跳转。</p>
+            <p><strong>延伸阅读</strong> —— 许多条目下附带“参考”或“关联概念”链接，适合在阅读一个主题时顺带浏览相邻知识点，形成网状理解。</p>
+            <p><strong>本地化浏览</strong> —— 对于不习惯英文界面的用户，pg模拟器 提供了一份中文视角的摘要，使初次接触相关概念的人更容易建立初步认知。</p>
+            <p style="margin-bottom:0;"><strong>轻量演示</strong> —— 部分页面包含模拟输出或伪代码片段，可用于快速理解某个子句的执行效果，无需启动任何数据库实例。</p>
+        </div>
+        <p>使用建议：将其视作一个<strong>辅助索引</strong>而非完整参考。对于深度调优或生产环境细节，仍建议配合 PostgreSQL 官方文档或真实环境进行验证。</p>
+    </section>
+
+    <!-- 访问说明 + FAQ 摘要 -->
+    <section>
+        <h2>关于访问 · 常见问题</h2>
+        <div class="faq-item">
+            <strong>pg模拟器 需要注册或付费吗？</strong>
+            <p>不需要。整个页面完全公开，无需登录，不收集任何个人信息。内容通过静态 HTML 呈现，与后端无交互。</p>
+        </div>
+        <div class="faq-item">
+            <strong>页面会频繁更新吗？</strong>
+            <p>更新节奏偏保守，主要围绕新增的常见查询场景或用户反馈较多的条目进行调整。如果你发现某个描述过时或有误，建议通过 repo 议题反馈（页面底部通常包含关联仓库链接）。</p>
+        </div>
+        <div class="faq-item">
+            <strong>是否能直接用于生产环境？</strong>
+            <p>不推荐。pg模拟器 的定位是学习与对照，并未经过完整测试或行为全覆盖。所有输出仅作为示意，不能替代真实数据库的行为。</p>
+        </div>
+        <div class="faq-item">
+            <strong>移动端浏览体验如何？</strong>
+            <p>页面采用窄正文宽度与响应式排版，手机与平板均可正常阅读，但大量代码段建议横屏或使用桌面设备查看以获得最佳体验。</p>
+        </div>
+        <p style="margin-top:1.5rem;">如果你正在寻找一个轻量、聚焦的中文参考入口，不妨将 <a href="https://cn-pgemo.com">pg模拟器</a> 加入书签，在需要快速查证时打开。</p>
+    </section>
+
+    <hr>
+    <div class="footer-note">
+        基于日常检索与对照视角编制 · 内容仅供学习参考
+    </div>
+</div>
+</body>
+</html>
